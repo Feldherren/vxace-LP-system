@@ -1,7 +1,7 @@
 =begin
 LP System v0.0, by Feldherren (rpaliwoda@googlemail.com)
 
-Running into error with collect method?
+Running into error with collect method? Not touching it. Teak also wants to know what's weird.
 =end
 module LP
   # Default maximum LP values for actors and enemies; if no value is supplied in the notebox for either, actors and enemies will have these
@@ -17,14 +17,14 @@ module LP
 end
 
 class Game_BattlerBase
-  attr_reader   :tp
+  attr_reader   :lp
   
   def mlp;  param(8);   end
   
   alias :initialize_LP :initialize
   def initialize
     :initialize_LP
-    @tp = 0
+    @lp = 0
   end
   # should I add MLP to params, so param_base, param_plus, param_min et cetera can get at it?
   
